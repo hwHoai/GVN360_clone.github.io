@@ -12,10 +12,6 @@ html {
     clear: both;
 }
 
-.select {
-    background-color: #4db2ec;
-}
-
 .ti-angle-down {
     left: 0;
     color: #fff;
@@ -29,9 +25,12 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    bottom: 3px;
+    bottom: 0px;
     background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.6)) ;
 
+}
+.select {
+    background-color: #4db2ec;
 }
 
 #main {
@@ -45,6 +44,12 @@ html {
 
 #search {
     height: 28px;
+    position: relative;
+}
+
+.search-icon:hover {
+    cursor: pointer;
+    color: #DD3333;
 }
 
 .search-icon {
@@ -54,6 +59,47 @@ html {
     width: 13px;
     height: 28px;
     padding-right: 50px ;;
+}
+
+#search-form {
+    background-color: #fff;
+    width: 348px;
+    height: 72px;
+    position: absolute;
+    right: 34px;
+    bottom: -74px; 
+    box-shadow: 0px 0px 5px #858484;
+    display: none;
+}
+
+#search-form-input {
+    width: 215px;
+    height: 32px;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0, 0.1);
+    margin: 20px 0 20px 20px;
+    float: left;
+    text-indent: 10px;
+}
+
+#search-form-input:focus-visible {
+    outline: none;
+    
+}
+
+#search-btn {
+    height: 32px;
+    width: 87px;
+    background-color: #000;
+    color: #fff;
+    float: left;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+#search-btn:hover {
+    cursor: pointer;
 }
 
 #heading-row {
@@ -89,10 +135,128 @@ html {
 
 #heading-row #categories-list .category:hover {
     cursor: pointer;
+    background-color: #4db2ec;
+}
+
+.sub-nav {
+    width: 1112px;
+    height: 281.75px;
+    background-color: #ffffff;
+    position: absolute;
+    margin: 0 26px;
+    box-shadow: 0px 0px 5px #858484;
+    display: none;
+}
+
+#sub-nav-menu {
+    background-color: rgba(221, 216, 216, 0.3);
+    width: 218px;
+    height: 100%;
+    text-transform: uppercase;
+    padding-top: 20px;
+    display: inline-block;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: rgba(221, 216, 216, 0.9);
+}
+
+#sub-nav-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sub-nav-menu-cats {
+    text-align: right;
+    padding: 5px 22px;
+    font-size: 13px;
+    line-height: 24px;
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 600;
+}
+
+.sub-nav-menu-cats:hover {
+    background-color: #fff;
+    border-width: 1px 0px 1px 0 ;
+    border-color: rgba(221, 216, 216, 0.9);
+    border-style: solid;
+    color: #DD3333;
+}
+
+#sub-nav-menu a:first-child {
+    text-transform: capitalize;
+}
+
+#sub-nav-contents {
+    width: 872px;
+    float: right;
+    overflow: hidden;
+    padding: 22px 25px 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.sub-nav-contents-news {
+    width: 196px;
+    float: left;
+}
+
+.sub-nav-contents-news img:hover ~ p,
+.sub-nav-contents-news p:hover {
+    color: #DD3333;
+}
+
+.sub-nav-contents-news img {
+    width: 196px;
+    height: 135px;
+    float: left; 
+}
+
+.sub-nav-contents-news p {
+    width: 196px;
+    height: 36px;
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 13px ;
+    line-height: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+#sub-nav-angle {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 22px 22px;
+}
+
+.sub-nav-angle-left,
+.sub-nav-angle-right {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px;
+    font-size: 7px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sub-nav-angle-left:hover,
+.sub-nav-angle-right:hover {
+    cursor: pointer;
+    background-color: #4db2ec;
+    border-color: #4db2ec;
+    color: #fff;
 }
 
 #body {
-
+    margin-bottom: 390px;
 }
 
 
@@ -105,28 +269,41 @@ html {
 
 #hot-news {
     margin: 0 48px;
+    height: 462px;
 }
 
 #hot-news a {
     position: relative;
     display: inline-block;
-    width: 49.7%;
+    width: 49.8%;
+    overflow: hidden;
+}
+
+#hot-news #hottest-news .blur-bottom {
+    bottom: 3px;
 }
 
 #hot-news a #biggest-banner {
     width: 100%;
-    height: 100%;
+    max-height: 462px;
+    transition-duration: 0.5s;
+    
+
 }
 
 #hot-news a #biggest-banner-news-tittle {
     position: absolute;
-    padding: 20px;
-    bottom: 30px;
+    bottom: 0px;
     color: #fff;
     font-size: 27px;
     display: block;
     width: 100%;
     font-weight: 550;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.8)) ;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-right: 30px;
 }
 
 #hot-news .banner-footer {
@@ -157,6 +334,7 @@ html {
     display: block;
     width: 49.7%;
     float: right;
+    height: 462px;
 }
 
 #other-news a {
@@ -165,35 +343,52 @@ html {
 
 #other-news a img {
     width: 100%;
-    
+    transition-duration: 0.5s;
 }
 
 #other-news a:first-child {
     width: 100%;
+    height: 261px;
+
 }
 
 
 #other-news a #other-news-tittle-1 {
     position: absolute;
-    padding: 0 20px;
-    bottom: 20px;
+    bottom: 0px;
     color: #fff;
-    font-size: 24px;
+    font-size: 23px;
     display: block;
     width: 100%;
-    font-weight: 550;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.8)) ;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 100px;
+    padding-right: 100px;
 }
 
 #other-news .double-bottom-news{
 display: inline-block;
 width: 49.55%;
+height: 198px;
+transition-duration: 0.5s;
+}
+
+#other-news .double-bottom-news .blur-bottom {
+    bottom: 2px;
 }
 
 .bottom-other-news-tittle {
     position: absolute;
-    bottom: 15px;
-    left: 20px;
+    bottom: 0px;
+    left: 0px;
     color: #fff;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.8)) ;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 100px;
+    padding-right: 15px;
 }
 
 #page-separator {
@@ -202,10 +397,25 @@ width: 49.55%;
     margin: 45px 48px 15px;
 }
 
+#news {
+    margin: 0 48px;
+    position: relative;
+}
+
 #news #lastNews {
     width: 696px;
-    margin-left: 48px;
     position: relative;
+    display: inline-block;
+    /* max-height: 1700px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+#news #lastNews::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none;  */
 }
 
 #lastNews-tag {
@@ -234,6 +444,7 @@ width: 49.55%;
     padding-left: 10px;
     position: absolute;
     width: 478px;
+    line-height: 28px;
 }
 
 .lastNews-news-title:hover {
@@ -264,6 +475,7 @@ width: 49.55%;
     position: absolute;
     font-size: 13px;
     color: rgb(0, 0, 0, 0.5);
+    line-height: 21px;
 }
 
 .lastNews-separator {
@@ -276,18 +488,26 @@ width: 49.55%;
     display: none;
 }
 
-#lastNews-btn-more {
+.lastNews-btn-more {
+    text-align: center;
+    display: block;
+    margin: 26px 0 48px;
+}
+
+.lastNews-btn-more button {
     padding: 8px 10px;
     border-width: 1px;
     border-color: rgb(0, 0, 0, 0.4);
     background-color: #fff;
     color: rgb(0, 0, 0, 0.4);
     font-size: 12px;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 26px;
+}
+
+.lastNews-btn-more button:hover {
+    cursor: pointer;
+    background-color: #4db2ec;
+    color: #fff;
+    border: #4db2ec;
 }
 
 .btn-ico-right-angle {
@@ -295,17 +515,159 @@ width: 49.55%;
 }
 
 #other {
-
+    position: absolute;
+    width: 372px;
+    padding-left: 48px;
+    top: 0;
+    right: 0px;
 }
 
 
-#ads {
+#other .ads {
+    display: inline-block;
+    width: 324px;
+    height: 324px;
+    margin-bottom: 40px;
 
 }
 
+#other-separator {
+    background-color: #000;
+    padding: 7px 12px 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+}
 
-#destop-background {
+#other-separator-line {
+    position: absolute;
+    width: 324px;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 26px;
+}
 
+#biggest-destopbackground-banner {
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 21px;
+}
+
+.destop-backgrounds {
+    display: block;
+    margin-top: 27px;
 }
 
 
+.biggest-destopbackground-banner-img {
+    display: inline-block ;
+}
+
+.destop-background-title {
+    color: #000;
+    font-size: 21px;
+    display: inline-block;
+}
+
+.destop-background-title:hover {
+    color: #DD3333;
+}
+
+.destop-backgrounds .banner-footer {
+    padding-top: 5px;
+    margin-bottom: 7px;
+}
+
+.destop-backgrounds .banner-footer .date,
+.destop-backgrounds .banner-footer .separator {
+    color: #000;
+}
+
+.other-destop-backgrounds {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.destop-background-separator {
+    height: 1px;
+    background-color: rgb(0, 0, 0, 0.1);
+    margin-bottom: 26px;
+}
+
+.destop-background-img {
+    width: 100px;
+    height: 70px;
+}
+
+.other-destop-backgrounds-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    width: 219px;
+    color: #000;
+    line-height: 20px;
+    padding-left: 6px;
+    margin-bottom: 4px;
+}
+
+.other-destop-backgrounds-title:hover {
+    color: #DD3333;
+}
+
+.other-destop-backgrounds .date {
+    padding-left: 10px;
+    color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 16px;
+}
+
+#pages-footer {
+    background-color: rgb(0, 0, 0, 0.9);
+    padding: 45px 25px;
+}
+
+#page-footer-content {
+    position: relative;
+}
+
+.page-360-logo {
+    padding: 0 24px;
+    width: 279px;
+    height: 76.22px;
+    display: block;
+    float: left;
+    position: relative;
+    top: 21px;
+    opacity: 0.8;
+}
+
+#page-footer-about {
+    display: inline-block;
+    padding-left: 24px;
+}
+
+#page-footer-about p {
+    color: #fff;
+}
+#page-footer-content-title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.page-footer-content {
+    font-size: 14px;
+    padding: 24px 0 10px;
+}
+
+.page-footer-content a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 3px;
+}
+
+#contact-us {
+    color: #DD3333;
+}

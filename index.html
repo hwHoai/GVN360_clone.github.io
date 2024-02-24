@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GVN360-clone</title>
     <link rel="stylesheet" href="./assets/CSS/styles.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
-    
 </head>
-
 <body>
-    <script src="./app.js"></script>
     <div id="main">
 
         <div id="search">
             <div class="search-icon ti-search"></div>
+            <div id="search-form">
+                <input type="text" id="search-form-input">
+                <div id="search-btn">Tìm kiếm</div>
+            </div>
         </div>
-
-
         <div id="heading-row">
-            <img src="./assets/img/logo.png" alt="GVN360-logo">
+            <a href="#"><img src="./assets/img/logo.png" alt="GVN360-logo"></a>
             <ul id="categories-list">
-                <li class="category select">Trang chủ</li>
-                <li class="category">
+                <li id="trang-chu" class="category select">
+                    Trang chủ
+                </li>
+                <li id="cong-nghe" class="category">
                     công nghệ
                     <div class="ti-angle-down"></div>
                 </li>
-                <li class="category">
+                <li id="tin-game" class="category">
                     Tin Game
                     <div class="ti-angle-down"></div>
                 </li>
-                <li class="category">
+                <li id="hinh-nen" class="category">
                     hình nền
                     <div class="ti-angle-down"></div>
                 </li>
-                <li class="category">mua hàng</li>
+                <li id="mua-hang" class="category">
+                    mua hàng
+                </li>
                 <div class="clear"></div>
             </ul>
 
@@ -42,6 +46,41 @@
 
 
         <div id="body">
+            <div class="sub-nav">
+                <div id="sub-nav-menu">
+                    <a href="#"><div class="sub-nav-menu-cats">tất Cả</div></a>
+                    <a href="#"><div class="sub-nav-menu-cats">đánh giá</div></a>
+                    <a href="#"><div class="sub-nav-menu-cats">Thủ thuật</div></a>
+                    <a href="#"><div class="sub-nav-menu-cats">khoa học</div></a>
+                    <a href="#"><div class="sub-nav-menu-cats">Tin công nghệ</div></a>
+                </div>
+                <div id="sub-nav-contents">
+                    <a href="#" class="sub-nav-contents-news">
+                        <img src="./assets/img/hot_news/DSC4449-265x198.jpg" alt="news">
+                        <p>NVIDIA Cách mạng hóa Quán iCafe Việt Nam với nền tảng RTX và các Sáng kiến Esports Hấp dẫn</p>
+                    </a>
+
+                    <a href="#" class="sub-nav-contents-news">
+                        <img src="./assets/img/hot_news/geforce-icafe-web-facebook-og-1200x630@2x-534x462.jpg" alt="news">
+                        <p>NVIDIA Cách mạng hóa Quán iCafe Việt Nam với nền tảng RTX và các Sáng kiến Esports Hấp dẫn</p>
+                    </a>
+
+                    <a href="#" class="sub-nav-contents-news">
+                        <img src="./assets/img/hot_news/Picture1-2-265x198.jpg" alt="news">
+                        <p>NVIDIA Cách mạng hóa Quán iCafe Việt Nam với nền tảng RTX và các Sáng kiến Esports Hấp dẫn</p>
+                    </a>
+
+                    <a href="#" class="sub-nav-contents-news">
+                        <img src="./assets/img/hot_news/Tech-Beat-2024-thumb-533x261.jpg" alt="news">
+                        <p>NVIDIA Cách mạng hóa Quán iCafe Việt Nam với nền tảng RTX và các Sáng kiến Esports Hấp dẫn</p>
+                    </a>
+                </div>
+                <div id="sub-nav-angle">
+                    <div class="sub-nav-angle-left ti-angle-left"></div>
+                    <div class="sub-nav-angle-right ti-angle-right"></div>
+                </div>
+                
+            </div>
 
             <div id="banner">
                 <a href="#"><img src="./assets/img/GeForceX_banner-1.jpg" alt="web-banner"></a>
@@ -49,9 +88,8 @@
 
 
             <div id="hot-news">
-                <a href="#">
-                    <div class="blur-bottom"></div>
-                    <img id="biggest-banner " src="./assets/img/hot_news/geforce-icafe-web-facebook-og-1200x630@2x-534x462.jpg" alt="biggest-banner">
+                <a id="hottest-news" href="#">
+                    <img id="biggest-banner" src="./assets/img/hot_news/geforce-icafe-web-facebook-og-1200x630@2x-534x462.jpg" alt="biggest-banner">
                     <div id="biggest-banner-news-tittle">NVIDIA Cách mạng hóa Quán iCafe Việt Nam với nền tảng RTX và các Sáng kiến Esports Hấp dẫn</div>
                     <div class="banner-footer">
                         <div class="author">Axium Fox</div>
@@ -60,17 +98,15 @@
                     </div>
                 </a>
                 <div id="other-news">
-                    <a href="#">
-                        <div class="blur-bottom"></div>
+                    <a id="first-news-anchors" href="#">
                         <img src="./assets/img/hot_news/Tech-Beat-2024-thumb-533x261.jpg" alt="news">
                         <div id="other-news-tittle-1">Toàn cảnh Tech Beat 2024 - Sự Hòa Quyện Ấn Tượng của Thể Thao Điện Tử và Văn Hóa Hiphop</div>
                     </a>
-                    <a class="double-bottom-news" href="#">
-                        <div class="blur-bottom"></div>
+                    <a id="left-news-anchors" class="double-bottom-news" href="#">
                         <img src="./assets/img/hot_news/Picture1-2-265x198.jpg" alt="news">
                         <div class="bottom-other-news-tittle">CORSAIR trình làng tản khí hiệu suất cao A115</div>
                     </a>
-                    <a class="double-bottom-news" href="#">
+                    <a id="right-news-anchors" class="double-bottom-news" href="#">
                         <div class="blur-bottom"></div>
                         <img src="./assets/img/hot_news/DSC4449-265x198.jpg" alt="news">
                         <div class="bottom-other-news-tittle">AMD RX 6600 - Chiếc card lý tưởng để max setting game AAA ở FullHD mùa Tết 2024</div>
@@ -192,6 +228,42 @@
                         <hr class="lastNews-separator">
                     </div>
 
+                    <div class="lastNews-news">
+                        <a href="#"><img src="./assets/img/last_news/thumbnail-218x150.jpg" alt="news"></a>
+                        <a class="lastNews-news-title" href="#"><p class="lastNews-news-title">Cơ hội săn hàng nghìn phần quà hấp dẫn tại Tech Beat 2024</p class="title"></a>
+                        <div class="banner-footer">
+                            <a href="#"><div class="author">Axium Fox</div></a>
+                            <div class="separator">-</div>
+                            <div class="date">31/01/2024</div>
+                        </div>
+                        <p class="lastNews-description ">Sự kiện Tech Beat 2024 diễn ra vào ngày 20-21/01/2024 tại Nhà thi đấu TDTT Rạch Miễu với vô vàn phần quà hấp dẫn cùng cơ hội giao lưu...</p>
+                        <hr class="lastNews-separator">
+                    </div>
+
+                    <div class="lastNews-news">
+                        <a href="#"><img src="./assets/img/last_news/thumbnail-218x150.jpg" alt="news"></a>
+                        <a class="lastNews-news-title" href="#"><p class="lastNews-news-title">Cơ hội săn hàng nghìn phần quà hấp dẫn tại Tech Beat 2024</p class="title"></a>
+                        <div class="banner-footer">
+                            <a href="#"><div class="author">Axium Fox</div></a>
+                            <div class="separator">-</div>
+                            <div class="date">31/01/2024</div>
+                        </div>
+                        <p class="lastNews-description ">Sự kiện Tech Beat 2024 diễn ra vào ngày 20-21/01/2024 tại Nhà thi đấu TDTT Rạch Miễu với vô vàn phần quà hấp dẫn cùng cơ hội giao lưu...</p>
+                        <hr class="lastNews-separator">
+                    </div>
+
+                    <div class="lastNews-news">
+                        <a href="#"><img src="./assets/img/last_news/thumbnail-218x150.jpg" alt="news"></a>
+                        <a class="lastNews-news-title" href="#"><p class="lastNews-news-title">Cơ hội săn hàng nghìn phần quà hấp dẫn tại Tech Beat 2024</p class="title"></a>
+                        <div class="banner-footer">
+                            <a href="#"><div class="author">Axium Fox</div></a>
+                            <div class="separator">-</div>
+                            <div class="date">31/01/2024</div>
+                        </div>
+                        <p class="lastNews-description ">Sự kiện Tech Beat 2024 diễn ra vào ngày 20-21/01/2024 tại Nhà thi đấu TDTT Rạch Miễu với vô vàn phần quà hấp dẫn cùng cơ hội giao lưu...</p>
+                        <hr class="lastNews-separator">
+                    </div>
+
                     <div class="lastNews-news lastNews-news-end">
                         <a href="#"><img src="./assets/img/last_news/thumbnail-218x150.jpg" alt="news"></a>
                         <a class="lastNews-news-title" href="#"><p class="lastNews-news-title">Cơ hội săn hàng nghìn phần quà hấp dẫn tại Tech Beat 2024</p class="title"></a>
@@ -204,20 +276,91 @@
                         <hr class="lastNews-separator">
                     </div>
 
-                    <button id="lastNews-btn-more">
-                        Xem thêm
-                        <div class="ti-angle-right btn-ico-right-angle"></div>
-                    </button>
+                    <div class="lastNews-btn-more">
+                        <button >
+                            Xem thêm
+                            <div class="ti-angle-right btn-ico-right-angle"></div>
+                        </button>
+                    </div>
                     
                 </div>
 
                 <div id="other">
-                    <div id="ads"></div>
-                    <div id="destop-backgrounds"></div>
+                    <a href="#" class="ads"><img class="ads" src="./assets/img/BANNERX-1.jpg" alt="ads"></a>
+                    <div id="other-separator">Hình nền đẹp</div>
+                    <hr id="other-separator-line">
+                    <div class="destop-backgrounds">
+                        <div id="biggest-destopbackground-banner">
+                            <a href="#">
+                                <img class="biggest-destopbackground-banner-img" src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="">
+                                <div class="destop-background-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền Megalodon</div>
+                            </a>
+                            <div class="banner-footer">
+                                <a href="#"><div class="author">Axium Fox</div></a>
+                                <div class="separator">-</div>
+                                <div class="date">31/01/2024</div>
+                            </div>
+                        </div>
+
+                        <div class="other-destop-backgrounds">
+                            <hr class="destop-background-separator">
+                            <a href="#" class="destop-background-img"><img src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="destop-background-img" class="destop-background-img"></a>
+                            <a class="other-destop-backgrounds-title" href="#"><p class="other-destop-backgrounds-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền bom nguyên tử</p class="title"></a>
+                            <div class="date">31/01/2024</div>
+                        </div>
+
+                        <div class="other-destop-backgrounds">
+                            <hr class="destop-background-separator">
+                            <a href="#" class="destop-background-img"><img src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="destop-background-img" class="destop-background-img"></a>
+                            <a class="other-destop-backgrounds-title" href="#"><p class="other-destop-backgrounds-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền bom nguyên tử</p class="title"></a>
+                            <div class="date">31/01/2024</div>
+                        </div>
+
+                        <div class="other-destop-backgrounds">
+                            <hr class="destop-background-separator">
+                            <a href="#" class="destop-background-img"><img src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="destop-background-img" class="destop-background-img"></a>
+                            <a class="other-destop-backgrounds-title" href="#"><p class="other-destop-backgrounds-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền bom nguyên tử</p class="title"></a>
+                            <div class="date">31/01/2024</div>
+                        </div>
+
+                        <div class="other-destop-backgrounds">
+                            <hr class="destop-background-separator">
+                            <a href="#" class="destop-background-img"><img src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="destop-background-img" class="destop-background-img"></a>
+                            <a class="other-destop-backgrounds-title" href="#"><p class="other-destop-backgrounds-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền bom nguyên tử</p class="title"></a>
+                            <div class="date">31/01/2024</div>
+                        </div>
+
+                        <div class="other-destop-backgrounds">
+                            <hr class="destop-background-separator">
+                            <a href="#" class="destop-background-img"><img src="./assets/img/destop_backgrounds/kkhk-324x235.jpg" alt="destop-background-img" class="destop-background-img"></a>
+                            <a class="other-destop-backgrounds-title" href="#"><p class="other-destop-backgrounds-title">Vì ai cũng cần desktop ấn tượng, mời anh em tải bộ hình nền bom nguyên tử</p class="title"></a>
+                            <div class="date">31/01/2024</div>
+                        </div>
+                        <div class="lastNews-btn-more">
+                            <button >
+                            Xem thêm
+                            <div class="ti-angle-right btn-ico-right-angle"></div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div id="pages-footer">
+            <div id="page-footer-content">
+                <a href="#"><img src="./assets/img/GVN360-544x180-01-300x99-1.png" alt="logo" class="page-360-logo"></a>
+                <div id="page-footer-about">
+                    <p id="page-footer-content-title">Về Chúng Tôi</p>
+                    <p class="page-footer-content">GVN360</p>
+                    <p class="page-footer-content">Liên hệ hợp tác:<a href="">tutl@gearvn.com</a></p>
+                    <p class="page-footer-content">Liên hệ chúng tôi:<a id="contact-us" href=""><span>tutl@gearvn.com</span></a></p>
                 </div>
             </div>
         </div>
+
     </div>
 </body>
-
+<script type="module" src="./app.js"></script>
 </html>
